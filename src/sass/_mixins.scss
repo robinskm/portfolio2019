@@ -27,7 +27,7 @@
     }
 }
 
-// translates & keyfranes
+// animations & keyfranes
 @mixin transform($str) {
     -webkit-transform: #{$str};
     -moz-transform: #{$str};
@@ -42,4 +42,36 @@
     -ms-transition: all 250ms ease-in-out;
     -o-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
+}
+
+// cro-bro opacity
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// gradient titles
+
+@mixin gradient($color) {
+    @if $color=="red" {
+        background: linear-gradient(to right, #{$red} 0%, #{$orange} 25%);
+    }
+    @if $color=="orange" {
+        background: linear-gradient(to right, #{$orange} 0%, #{$yellow} 20%);
+    }
+    @if $color=="yellow" {
+        background: linear-gradient(to right, #{$yellow} 0%, #{$green} 45%);
+    }
+    @if $color=="green" {
+        background: linear-gradient(to right, #{$green} 0%, #{$blue} 30%);
+    }
+    @if $color=="blue" {
+        background: linear-gradient(to right, #{$blue} 0%, #{$purple} 40%);
+    }
+    @if $color=="purple" {
+        background: linear-gradient(to right, #{$purple} 0%, #{$white} 70%);
+    }
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

@@ -31,7 +31,7 @@ gulp.task('sass', function () {
         }))
         .pipe(sourcemaps.write(current_location + 'css'))
         // move to folder
-        .pipe(gulp.dest(current_location + 'css'));
+        .pipe(gulp.dest(current_location + 'dist/css'));
 });
 
 // the js task
@@ -47,5 +47,5 @@ gulp.task('scripts', function () {
         suffix: '.min'
     }))
     .pipe(sourcemaps.write(current_location + 'js'))
-    .pipe(gulp.dest(current_location + 'js'))
+    .pipe(gulp.dest(current_location + 'dist/js'))
 });
