@@ -1,0 +1,51 @@
+body {
+    font-family:$body-font;
+    font-size:$body-size;
+    color:$black;
+}
+
+h1, h2, h3, h4, p {
+    margin:20px 0;
+    line-height:100%;
+}
+
+h1 {
+    font-size:$h1-size;
+    letter-spacing:-2px;
+    text-shadow: 0px 2px 3px $gray-1;
+    color:$red;
+}
+
+h2 {
+    font-size:$h2-size;
+    letter-spacing:-1px;
+    text-shadow: 0px 2px 3px $gray-1;
+    color:$orange;
+}
+
+h3 {
+    font-size:$h3-size;
+    letter-spacing:-1px;
+    text-shadow: 0px 2px 3px $gray-1;
+    color:$yellow;
+}
+
+h4 {
+    font-size:$h4-size;
+    letter-spacing:-1px;
+    text-shadow: 0px 2px 3px $gray-1;
+    color:$green;
+}
+
+p {
+    font-size:$body-size;
+}
+
+a {
+    text-decoration:none;
+    color:$black;
+    @include animate;
+    &:hover {
+        color:$blue;
+    }
+}

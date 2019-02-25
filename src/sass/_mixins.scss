@@ -1,0 +1,45 @@
+// media queries
+// desktop
+@mixin desktop {
+    @media only screen and (max-width:#{$desktop-width}) {
+        @content;
+    }
+}
+
+// tablet
+@mixin tablet {
+    @media only screen and (max-device-width:#{$tablet-width}) {
+        @content;
+    }
+}
+
+//mobile - landscape
+@mixin mobile-landscape {
+    @media only screen and (max-device-width:#{$mobile-landscape-width}) and (orientation: landscape) {
+        @content;
+    }
+}
+
+// mobile - portrait
+@mixin mobile-portrait {
+    @media only screen and (max-device-width:#{$mobile-portrait-width}) {
+        @content;
+    }
+}
+
+// translates & keyfranes
+@mixin transform($str) {
+    -webkit-transform: #{$str};
+    -moz-transform: #{$str};
+    -ms-transform: #{$str};
+    -o-transform: #{$str};
+    transform: #{$str};      
+}
+
+@mixin animate {
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
