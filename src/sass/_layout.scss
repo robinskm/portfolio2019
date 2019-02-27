@@ -10,10 +10,11 @@ body {
     font-family:$body-font;
     font-size:$body-size;
     color:$black;
+    background:$white;
 }
 
 h1, h2, h3, h4, p {
-    margin:20px 0;
+    margin:0;
     line-height:calc(100% + 2px);
 
     &.red {
@@ -36,6 +37,8 @@ h1, h2, h3, h4, p {
     }
 
     &.gradient {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         &.red {
             @include gradient('red');
         }
@@ -74,6 +77,7 @@ h1 {
 h2 {
     font-size:$h2-size;
     letter-spacing:-1px;
+    padding-bottom:20px;
 }
 
 h3 {
@@ -100,6 +104,21 @@ a {
     }
 }
 
+img {
+    max-width:100%;
+    min-width: 690px;
+    max-height:100%;
+    width:100%;
+}
+
 section {
+}
+
+section, div {
     position:relative;
+    overflow:hidden;
+
+    .center {
+        text-align:center;
+    }
 }
