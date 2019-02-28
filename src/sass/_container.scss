@@ -1,12 +1,18 @@
 .container {
-    height:48vw;
+    height:100%;
     
     .parallax {
-        background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center center;
+        background-size:cover;
         height:100%;
+        box-shadow: inset 0 0 20px $black;
+        justify-content: center;
+    }
+
+    .text {
+        padding:0 50px;
     }
 
     &.flex {
@@ -23,23 +29,23 @@
             display: flex;
             flex-direction: column;
             &.text {
-                padding:0 50px;
+                width:calc(35% - 100px);
             }
             &.image {
-                flex:0 0 35%;
-                box-shadow: inset 0 0 20px $black;
+                width:35%;
             }
         }
 
         .half {
             display: flex;
             flex-direction: column;
+            width:50%;
             &.text {
-                padding:0 50px;
-            }
-            &.image {
-                flex:0 0 50%;
-                box-shadow: inset 0 0 20px $black;
+                width:calc(50% - 100px);
+
+                div {
+                    float:left;
+                }
             }
         }
 
@@ -47,11 +53,10 @@
             display: flex;
             flex-direction: column;
             &.text {
-                padding:0 50px;
+                width:calc(65% - 100px);
             }
             &.image {
-                flex:0 0 65%;
-                box-shadow: inset 0 0 20px $black;
+                width:65%
             }
         }
 
