@@ -6,7 +6,8 @@ $(document).ready(function(){
     $.scrollify({
         section : "section",
         scrollSpeed: 1000,
-        updateHash: false
+        updateHash: false,
+        scrollbars:false
     });
     
     $("a").on('click', function(event) {
@@ -51,4 +52,6 @@ $(document).ready(function(){
 
   $window.on('scroll', viewCheck);
   $window.trigger('scroll');
+
+  $('#Home .container').delay(250).addClass('fade-in');
 });
