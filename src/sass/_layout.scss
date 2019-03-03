@@ -1,4 +1,8 @@
-html, body {
+* {
+    @include animate;
+}
+ 
+ html, body {
     margin:0;
     padding:0;
     width:100%;
@@ -294,6 +298,7 @@ section, div {
     position:relative;
     overflow:hidden;
 
+    @include animate;
     .center {
         text-align:center;
     }
