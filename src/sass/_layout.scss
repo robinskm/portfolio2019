@@ -22,32 +22,72 @@ body {
     background:$white;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, i {
     margin:0;
     padding:0;
     line-height:calc(100% + 2px);
 
+    @include tablet {
+        color:$white;
+        opacity:.75;
+    }
+
     &.red {
         color:$red;
+
+        @include tablet {
+            color:$white;
+            opacity:.75;
+        }
     }
     &.orange {
         color:$orange;
+
+        @include tablet {
+            color:$white;
+            opacity:.75;
+        }
     }
     &.yellow {
         color:$yellow;
+
+        @include tablet {
+            color:$white;
+            opacity:.75;
+        }
     }
     &.green {
         color:$green;
+
+        @include tablet {
+            color:$white;
+            opacity:.75;
+        }
     }
     &.blue {
         color:$blue;
+
+        @include tablet {
+            color:$white;
+            opacity:.75;
+        }
     }
     &.purple {
         color:$purple;
+
+        @include tablet {
+            color:$white;
+            opacity:.75;
+        }
     }
     &.white {
         color:$white;
         opacity:.7;
+
+        @include tablet {
+            color:$white;
+            opacity:.75;
+        }
     }
 
     &.gradient {
@@ -78,6 +118,9 @@ h1, h2, h3, h4, p {
 
     &.text-shadow {
         text-shadow:0px 2px 3px $gray-1;
+        @include tablet {
+            text-shadow:0px 2px 3px $black;
+        }
     }
 
     &.title {
@@ -110,10 +153,18 @@ p {
     font-size:$body-size;
     padding:20px 0;
 
+    @include tablet {
+        color:$white;
+        opacity:.75;
+    }
+
     &.subtitle {
         padding:0;
         display:flex;
-        align-items:center;    
+        align-items:center;   
+        @include tablet { 
+            display:block;
+        }
     }
 }
 
@@ -193,6 +244,9 @@ ul {
     padding:0;
     li {
         list-style-type:none;
+        p {
+            padding:5px 0;
+        }
     }
 }
 
@@ -203,9 +257,35 @@ i {
 section {
     height:100%;
 
+    @include tablet {
+        box-shadow: 0 0 20px $black;
+    }
+
     &#Home {
+        box-shadow: 0 0 20px $black;
+        @include tablet {
+            height:100%;
+        }
+
+        h1, p {
+            opacity:.85;
+
+            &.text-shadow {
+                @include tablet {
+                    text-shadow:0px 2px 3px $gray-1;
+                }
+            }
+        }
+    
         .subtitle {
             justify-content:center;
+        }
+        .container {
+            &.flex {
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }
         }
     }
 }

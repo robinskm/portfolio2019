@@ -2,7 +2,7 @@ $(document).ready(function(){
   // variables for viewCheck
   var scrollAnimation = $('.view-element');
   var $window = $(window);
-
+       
     $.scrollify({
         section : "section",
         scrollSpeed: 1000,

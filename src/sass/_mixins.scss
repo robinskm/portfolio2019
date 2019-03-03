@@ -8,21 +8,21 @@
 
 // tablet
 @mixin tablet {
-    @media only screen and (max-device-width:#{$tablet-width}) {
+    @media only screen and (max-width:#{$tablet-width}) {
         @content;
     }
 }
 
 //mobile - landscape
 @mixin mobile-landscape {
-    @media only screen and (max-device-width:#{$mobile-landscape-width}) and (orientation: landscape) {
+    @media only screen and (max-width:#{$mobile-landscape-width}) and (orientation: landscape) {
         @content;
     }
 }
 
 // mobile - portrait
 @mixin mobile-portrait {
-    @media only screen and (max-device-width:#{$mobile-portrait-width}) {
+    @media only screen and (max-width:#{$mobile-portrait-width}) {
         @content;
     }
 }
