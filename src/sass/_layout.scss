@@ -28,13 +28,17 @@ body {
 
 h1, h2, h3, h4, p, i {
     margin:0;
-    padding:0;
+    padding:20px 0;
     line-height:100%;
 
-    @include tablet {
+    &:last-of-type {
+        padding-bottom:0;
+    }
+
+    /* @include tablet {
         color:$white;
         opacity:.75;
-    }
+    } */
 
     &.red {
         color:$red;

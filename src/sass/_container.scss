@@ -26,54 +26,6 @@
         }
     }
 
-    .image {
-        height:100%;
-        justify-content:center;
-        @include animate;
-        @include tablet {
-            h2, h3 {
-                display:none;
-            }
-        }
-        @include tablet {
-            display:none !important;
-        }
-    }
-
-    .text {
-        padding:0 50px;
-        background:$white;
-        height:100%;
-        justify-content:center;
-        box-shadow: 0 0 20px $black;
-
-        @include tablet {
-            background:transparent;
-            box-shadow:none;
-
-            &.right {
-                text-align:right;
-            }
-
-            &.left {
-                text-align:left;
-            }
-        }
-
-        @include mobile-portrait {
-            background:transparent;
-            box-shadow:none;
-
-            &.right {
-                text-align:center;
-            }
-
-            &.left {
-                text-align:center;
-            }
-        }
-    }
-
     &.flex {
         display:flex;
         align-items:center;
@@ -134,5 +86,100 @@
             }
         }
 
+    }
+
+    .image {
+        height:100%;
+        justify-content:center;
+        @include animate;
+        /* @include tablet {
+            h2, h3 {
+                display:none;
+            }
+        }
+        @include tablet {
+            display:none !important;
+        } */
+    }
+
+    .text {
+        padding:0 50px;
+        background:$white;
+        height:100%;
+        justify-content:center;
+        box-shadow: 0 0 20px $black;
+        position:relative;
+        z-index:1;
+
+        @include tablet {
+            background:transparent;
+            box-shadow:none;
+
+            &.right {
+                text-align:right;
+            }
+
+            &.left {
+                text-align:left;
+            }
+        }
+
+        @include mobile-portrait {
+            background:transparent;
+            box-shadow:none;
+
+            &.right {
+                text-align:center;
+            }
+
+            &.left {
+                text-align:center;
+            }
+        }
+    }
+
+    .arrow {
+        width:100%;
+        position:absolute;
+        bottom:0;
+        text-align:center;
+    }
+
+    div.red {
+        background-color:$red;
+    }
+    div.orange {
+        background-color:$orange;
+    }
+    div.yellow {
+        background-color:$yellow;
+    }
+    div.green {
+        background-color:$green;
+    }
+    div.blue {
+        background-color:$blue;
+    }
+    div.purple {
+        background-color:$purple;
+    }
+
+    div.red-fade {
+        background: linear-gradient($red, $orange);
+    }
+    div.orange-fade {
+        background: linear-gradient($orange, $yellow);
+    }
+    div.yellow-fade {
+        background: linear-gradient($yellow, $green);
+    }
+    div.green-fade {
+        background: linear-gradient($green, $blue);
+    }
+    div.blue-fade {
+        background: linear-gradient($blue, $purple);
+    }
+    div.purple-fade {
+        background: linear-gradient($purple, $black);
     }
 }
