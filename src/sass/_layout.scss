@@ -29,7 +29,7 @@ body {
 h1, h2, h3, h4, p, i {
     margin:0;
     padding:0;
-    line-height:calc(100% + 2px);
+    line-height:100%;
 
     @include tablet {
         color:$white;
@@ -156,6 +156,7 @@ h4 {
 p {
     font-size:$body-size;
     padding:20px 0;
+    line-height:calc(#{$body-size} + 15px);
 
     @include tablet {
         color:$white;
@@ -249,7 +250,7 @@ ul {
     li {
         list-style-type:none;
         p {
-            padding:5px 0;
+            padding:0;
         }
     }
 }
